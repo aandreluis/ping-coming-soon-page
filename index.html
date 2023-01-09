@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <main class="container">
+      <div id="content">
+        <img class="logo" src="./public/logo.svg" alt="PING Logo" />
+        <div class="text">
+          <h1>We are launching <span>soon!</span></h1>
+          <h2>Subscribe and get notified</h2>
+        </div>
+        <div class="form">
+          <form name="emailForm" action="#">
+            <div class="emailDiv">
+              <label for="email">Your email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address..."
+              />
+              <p class="error-text hidden">
+                Please provide a valid email address
+              </p>
+            </div>
+            <button type="submit">Notify Me</button>
+          </form>
+        </div>
+        <img
+          class="illustration"
+          src="./public/illustration-dashboard.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <footer>
+          <div class="social-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+
+          <p>&copy; Copyright Ping. All rights reserved.</p>
+
+          <p class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/aandreluis" target="_blank"
+              >André Luis</a
+            >.
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <!-- Thanks modal -->
+    <div class="modal">
+      <div class="modal-section">
+        <button type="button" class="close">
+          <ion-icon name="close"></ion-icon>
+        </button>
+        <h2>Thanks for <span>subscribe!</span></h2>
+        <lord-icon
+          src="https://cdn.lordicon.com/egiwmiit.json"
+          trigger="loop"
+          delay="1000"
+          colors="primary:#4f7df3"
+          state="hover"
+          aria-hidden="true"
+        >
+        </lord-icon>
+      </div>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+
+    <!-- Icons scripts -->
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

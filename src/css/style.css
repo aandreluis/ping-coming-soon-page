@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  /* Primary */
+  --blue: #4f7df3;
+  /* Secondary */
+  --light-red: #ff5263;
+  --pale-blue: #c2d3ff;
+  /* Neutral */
+  --gray: #969696;
+  --very-dark-blue: #151f29;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 20px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  /* width: 100vw; */
+}
+
+#content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 16px;
+  transition: 0.2s ease;
+  width: 90%;
+}
+
+#content .logo {
+  width: 60px;
+}
+
+#content .text {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#content .text h1 {
+  color: var(--gray);
+  font-size: 26px;
+  font-weight: 300;
+}
+
+#content .text h1>span {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+#content .text h2 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 12px;
+}
+
+#content .form {
+  margin-top: 32px;
+  width: 100%;
+}
+
+#content form label {
+  display: none;
+}
+
+#content form input[type="email"] {
+  border-radius: 25px;
+  border: 1px solid var(--pale-blue);
+  outline: none;
+  padding: 14px 32px;
+  width: 100%;
+}
+
+#content form input[type="email"]::placeholder {
+  color: var(--pale-blue);
+}
+
+.error {
+  animation: inputShake 0.4s ease;
+  border-color: var(--light-red) !important;
+}
+
+#content .error-text {
+  animation: fadeIn 0.3s ease;
+  color: var(--light-red);
+  font-size: 13px;
+  font-style: italic;
+  margin: 4px 0 0px 0;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#content form button {
+  background-color: var(--blue);
+  border-radius: 25px;
+  border: 1px solid var(--pale-blue);
+  box-shadow: 0px 4px 10px -4px rgba(79, 125, 243, 0.5);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 4px;
+  outline: none;
+  padding: 14px 24px;
+  width: 100%;
+}
+
+#content form button:hover,
+#content form button:focus {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+#content form button:focus {
+  text-decoration: underline;
+}
+
+#content form button:disabled {
+  cursor: no-drop;
+  opacity: 0.8;
+}
+
+#content .illustration {
+  margin-top: 40px;
+  width: 100%;
+}
+
+#content footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+#content .social-icons {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 124px;
+}
+
+#content .social-icons ion-icon {
+  border-radius: 50%;
+  color: var(--blue);
+  padding: 5px;
+}
+
+#content .social-icons ion-icon:hover {
+  background-color: var(--blue);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+#content footer p {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+.modal {
+  align-items: center;
+  background-color: rgba(26, 35, 44, 0.4);
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.modal-section {
+  align-items: center;
+  animation: jump 0.3s ease-in-out, fadeIn 0.5s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: -4px -4px 10px -4px rgba(43, 43, 43, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+  position: relative;
+  width: 90%;
+}
+
+.modal-section h2 {
+  color: var(--gray);
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.modal-section h2 span {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+.modal-section lord-icon {
+  height: 132px;
+  margin-top: 32px;
+  width: 132px;
+}
+
+.close {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: 0.6;
+  outline: 0;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.close:hover,
+.close:focus {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+@media (width > 500px) {
+  #content {
+    padding: 0 30px;
+  }
+
+  #content .logo {
+    width: 80px;
+  }
+
+  #content .text h1 {
+    font-size: 36px;
+  }
+
+  #content .text p {
+    font-size: 18px;
+  }
+
+  #content form {
+    align-items: baseline;
+    display: flex;
+  }
+
+  #content form .emailDiv {
+    width: 100%;
+  }
+
+  #content form input[type="email"] {
+    padding: 16px 32px;
+  }
+
+  #content .error-text {
+    margin-bottom: 0;
+    margin-left: 32px;
+    text-align: start;
+  }
+
+  #content form button {
+    margin-left: 8px;
+    padding: 16px 24px;
+    width: 50%;
+  }
+
+  .modal-section {
+    padding: 32px 0 64px;
+    width: 400px;
+  }
+
+  .modal-section h2 {
+    font-size: 30px;
+  }
+
+  .modal-section lord-icon {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (width > 900px) {
+  #content {
+    padding: 0 20vw;
+  }
+
+  #content .illustration {
+    width: 90%;
+  }
+}
+
+@media (width > 1440px) {
+  #content {
+    padding: 0 25vw;
+  }
+
+  #content .illustration {
+    width: 85%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes inputShake {
+  0% {
+    transform: rotate(0.5deg);
+  }
+
+  25% {
+    transform: rotate(-0.5deg);
+  }
+
+  50% {
+    transform: rotate(0.5deg);
+  }
+
+  75% {
+    transform: rotate(-0.5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
