@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🌎 Links
 
-- Solution: []()
-- Live Site: []()
+- Solution: [https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-PMhc2X7nf2](https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-PMhc2X7nf2)
+- Live Site: [https://ping-coming-soon-page-aandreluis.netlify.app/](https://ping-coming-soon-page-aandreluis.netlify.app/)
 
 ---
